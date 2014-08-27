@@ -4,6 +4,19 @@
 		<meta charset="UTF-8">
 		<title>cneud</title>
 		<base href="index.html" target="_blank">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript">
+		function showonly(thechosenone) {
+     		$('.newboxes').each(function(index) {
+          		if ($(this).attr("id") == thechosenone) {
+               		$(this).show(200);
+          		}
+          		else {
+               		$(this).hide(600);
+          		}
+     		});
+		}
+		</script>
 		<style type=text/css>
 		body {
 			color:gray; 
@@ -20,7 +33,7 @@
 			margin-bottom:1em;
 			}
 			div.c3 {
-			margin-left:5em;
+			float:right;
 			}
 			a:link {
 			color:#a9a9a9;
@@ -31,21 +44,33 @@
 			a:hover {
 			color:#fff;
 			}
+			.newboxes {
+    		display: none;
+			}
 		</style>
 	</head>
 	<body>
-		<h3>Clemens Neudecker</h3>
-		Researcher / Project Manager / Philosopher / Hacker<br>
 		<br>
-		<a href="#networks" target="_self">Networks</a>&nbsp;&nbsp;&nbsp;
-		<a href="#blogs" target="_self">Blogs</a>&nbsp;&nbsp;&nbsp;
-		<a href="#publications" target="_self">Publications</a>&nbsp;&nbsp;&nbsp;
-		<a href="#presentations" target="_self">Presentations</a>&nbsp;&nbsp;&nbsp;
-		<a href="#projects" target="_self">Projects</a><br>
+		Clemens Neudecker / Researcher . Project Manager . Philosopher . Hacker
+		<!-- Some fun -->
+		<div class="c3">
+			<a href="http://validator.w3.org/check?uri=https://cneud.github.io/"><img alt="I heart Validator logo" src="http://validator.w3.org/unicorn/images/I_heart_validator.png"></a>
+			<a href="http://www.cornify.com" onclick="cornify_add();return false;"><img src="http://www.cornify.com/assets/cornify.gif" width="57" height="14" alt="Cornify" /><script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script></a>
+		</div>
+		<br>
+		<!-- OK, enough of that -->
+		<br>
+		<a href="javascript:showonly('networks');" target="_self">Networks</a>&nbsp;&nbsp;&nbsp;
+		<a href="javascript:showonly('blogs');" target="_self">Blogs</a>&nbsp;&nbsp;&nbsp;
+		<a href="javascript:showonly('publications');" target="_self">Publications</a>&nbsp;&nbsp;&nbsp;
+		<a href="javascript:showonly('presentations');" target="_self">Presentations</a>&nbsp;&nbsp;&nbsp;
+		<a href="javascript:showonly('projects');" target="_self">Projects</a>
+		<br>
+	<div class="newboxes" id="networks">
+		<a id="networks"></a>
 		<br>
 		<hr>
 		<br>
-		<a id="networks"></a>
 		<a href="#networks" target="_self">Networks</a><br>
 		<br>
 		<div class="c1">
@@ -55,8 +80,12 @@
 			<div class="c2"><a href="https://github.com/cneud">github</a></div>
             <div class="c2"><a href="http://www.researchgate.net/profile/Clemens_Neudecker/">researchgate</a></div>
 		</div>
-		<br>
+	</div>
+	<div class="newboxes" id="blogs">
 		<a id="blogs"></a>
+		<br>
+		<hr>
+		<br>
 		<a href="#blogs" target="_self">Blogs</a><br>
 		<br>
 		<div class="c1">
@@ -73,8 +102,12 @@
 				Connecting digital preservation expertise
 			</div>
 		</div>
-		<br>
+	</div>
+	<div class="newboxes" id="publications">
 		<a id="publications"></a>
+		<br>
+		<hr>
+		<br>
 		<a href="#publications" target="_self">Publications</a><br>
 		<br>
 		<div class="c1">
@@ -157,8 +190,12 @@
 					Ludwig-Maximilians-Universit&auml;t, M&uuml;nchen.
 				</div>
 		</div>
-		<br>		
+	</div>
+	<div class="newboxes" id="presentations">		
 		<a id="presentations"></a>
+		<br>
+		<hr>
+		<br>
 		<a href="#presentations" target="_self">Presentations</a><br>
 		<br>
 		<div class="c1">
@@ -321,7 +358,12 @@
 					[<a href="http://www.isast.org/qqml2010.html">web</a>]
 				</div>
 		</div>
+	</div>
+	<div class="newboxes" id="projects">
 		<a id="projects"></a>
+		<br>
+		<hr>
+		<br>
 		<a href="#projects" target="_self">Projects</a><br>
 		<br>
 		<div class="c1">
@@ -409,12 +451,6 @@
 				Wiener Slawistischer Almanach (BSB)
 			</div>
 		</div>
-		<br>
-		<!-- Some fun -->
-		<div class="c3">
-			<a href="http://validator.w3.org/check?uri=https://cneud.github.io/"><img alt="I heart Validator logo" src="http://validator.w3.org/unicorn/images/I_heart_validator.png"></a>
-			<a href="http://www.cornify.com" onclick="cornify_add();return false;"><img src="http://www.cornify.com/assets/cornify.gif" width="57" height="14" alt="Cornify" /><script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script></a>
-		</div>
-		<!-- OK, enough of that -->
+	</div>
 	</body>
 </html>
