@@ -6,9 +6,9 @@
 		<base href="index.html" target="_blank">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript">
-		function showonly(thechosenone) {
-     		$('.newboxes').each(function(index) {
-          		if ($(this).attr("id") == thechosenone) {
+		function display(selectmenu) {
+     		$('.menu').each(function(index) {
+          		if ($(this).attr("id") == selectmenu) {
                		$(this).show(200);
           		}
           		else {
@@ -44,29 +44,30 @@
 			a:hover {
 			color:#fff;
 			}
-			.newboxes {
+			.menu {
     		display: none;
 			}
 		</style>
 	</head>
 	<body>
 		<br>
-		<a href="javascript:showonly('#');"  target="_self">Clemens Neudecker</a>&nbsp;&nbsp;Researcher . Project Manager . Philosopher . Hacker
+		<a href="javascript:display('#');"  target="_self">Clemens Neudecker</a><br>
 		<!-- Some fun -->
 		<div class="c3">
 			<a href="http://validator.w3.org/check?uri=https://cneud.github.io/"><img alt="I heart Validator logo" src="http://validator.w3.org/unicorn/images/I_heart_validator.png"></a>
+			<br>
 			<a href="http://www.cornify.com" onclick="cornify_add();return false;"><img src="http://www.cornify.com/assets/cornify.gif" width="57" height="14" alt="Cornify" /><script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script></a>
 		</div>
-		<br>
 		<!-- OK, enough of that -->
+		Berlin, DE<br>
 		<br>
-		<a href="javascript:showonly('networks');" target="_self">Networks</a>&nbsp;&nbsp;&nbsp;
-		<a href="javascript:showonly('blogs');" target="_self">Blogs</a>&nbsp;&nbsp;&nbsp;
-		<a href="javascript:showonly('publications');" target="_self">Publications</a>&nbsp;&nbsp;&nbsp;
-		<a href="javascript:showonly('presentations');" target="_self">Presentations</a>&nbsp;&nbsp;&nbsp;
-		<a href="javascript:showonly('projects');" target="_self">Projects</a>
+		<a href="javascript:display('projects');" target="_self">projects</a>.
+		<a href="javascript:display('publications');" target="_self">research</a>.
+		<a href="javascript:display('presentations');" target="_self">talks</a>.  
+		<a href="javascript:display('blogs');" target="_self">blogs</a>. 
+		<a href="javascript:display('networks');" target="_self">networks</a>.
 		<br>
-	<div class="newboxes" id="networks">
+	<div class="menu" id="networks">
 		<br>
 		<hr>
 		<br>
@@ -76,11 +77,11 @@
 			<div class="c2"><a href="https://github.com/cneud">github</a></div>
             <div class="c2"><a href="http://www.researchgate.net/profile/Clemens_Neudecker/">researchgate</a></div>
 	</div>
-	<div class="newboxes" id="blogs">
+	<div class="menu" id="blogs">
 		<br>
 		<hr>
 		<br>
-			<div class="c2"><a href="http://unnaturaldoubts.wordpress.com/">unnaturaldoubts</a><br>
+			<div class="c2"><a href="http://unnaturaldoubts.wordpress.com/">unnatural doubts</a><br>
 				A compilation of resources on Wittgenstein, Epistemology &amp; Skepticism
 			</div>
 			<div class="c2"><a href="http://researchkb.wordpress.com/author/cneudecker/">@researchkb</a><br>
@@ -93,7 +94,7 @@
 				Connecting digital preservation expertise
 			</div>
 	</div>
-	<div class="newboxes" id="publications">
+	<div class="menu" id="publications">
 		<br>
 		<hr>
 		<br>
@@ -176,12 +177,12 @@
 		<a href="#publications_2007" target="_self">2007</a>
 		<div class="c1">
 				<br>
-				<div class="c2"><em>Zweifel und Gewissheit. Wittgensteins Skeptizismuskritik</em><br>
+				<div class="c2"><em>Zweifel und Gewissheit. Wittgensteins Skeptizismuskritik in '&Uuml;ber Gewissheit'</em> (M.A.)<br>
 					Ludwig-Maximilians-Universit&auml;t, M&uuml;nchen.
 				</div>
 		</div>
 	</div>
-	<div class="newboxes" id="presentations">		
+	<div class="menu" id="presentations">		
 		<br>
 		<hr>
 		<br>
@@ -351,7 +352,7 @@
 				</div>
 		</div>
 	</div>
-	<div class="newboxes" id="projects">
+	<div class="menu" id="projects">
 		<br>
 		<hr>
 		<br>
@@ -364,8 +365,8 @@
 				</div>
 		</div>
 		<br>
-			<a id="projects_kb"></a>
-			<a href="#projects_kb" target="_self">KB&nbsp;&nbsp;</a> - <a href="http://kb.nl/">Koninklijke Bibliotheek</a>&nbsp;&nbsp;(2009 - 2014)
+		<a id="projects_kb"></a>
+		<a href="#projects_kb" target="_self">KB</a>&nbsp;&nbsp; - <a href="http://kb.nl/">Koninklijke Bibliotheek</a>&nbsp;&nbsp;(2009 - 2014)
 		<div class="c1">
 			<br>
 			<div class="c2"><a href="http://www.europeana-newspapers.eu/">Europeana Newspapers</a><br>
@@ -401,43 +402,43 @@
 		<a href="#projects_bsb" target="_self">BSB</a> - <a href="http://www.bsb-muenchen.de/">Bayerische Staatsbibliothek</a>&nbsp;&nbsp;(2003 - 2009)
 		<div class="c1">
 			<br>
-			<div class="c2"><a href="http://www.impact-project.eu/">IMPACT</a><br>
-				Improving Access to Historical Text (EU/FP7/IP)
-			</div>
-			<div class="c2"><a href="http://digi20.digitale-sammlungen.de/">Digi20</a><br>
-				Digitalisierung der DFG-Sondersammelgebiete (DFG)
-			</div>
-			<div class="c2"><a href="http://www.ostdok.de/">OstDok</a><br>
-				Osteuropa-Dokumente online (DFG)
-			</div>
-			<div class="c2"><a href="http://www.perspectivia.net/content/publikationen/francia/francia-retro">Francia-Retro</a><br>
-				Forschungen zur westeurop&auml;ischen Geschichte (DHIP)
-			</div>
-			<div class="c2"><a href="http://www.bmlo.lmu.de/">BMLO</a><br>
-				Bayerisches Musiker-Lexikon online (DFG)
-			</div>
-			<div class="c2"><a href="http://www.bayerische-landesbibliothek-online.de/">BLO</a><br>
-				Bayerische Landesbibliothek online (StMWFK)
-			</div>
-			<div class="c2"><a href="http://www.dmgh.de/">dMGH</a><br>
-				Digitale Monumenta Germaniae Historica (DFG)
-			</div>
-			<div class="c2"><a href="http://www.reichstag-abgeordnetendatenbank.de/">RT III</a><br>
-				Reichstagsabgeordneten Datenbank (DFG)
-			</div>
-			<div class="c2"><a href="http://www.reichstagsprotokolle.de/index.html">RT II</a><br>
-				Verhandlungen des Deutschen Reichstags (DFG)
-			</div>
-			<div class="c2"><a href="http://geschichte.digitale-sammlungen.de/hab/online/angebot">HAB</a><br>
-				Historischer Atlas von Bayern (BAdW)
-			</div>
-			<div class="c2"><a href="http://personen.digitale-sammlungen.de/baltlex/start.html">BaltLex</a><br>
-				Baltische biographische Lexika (BSB/UTlib)
-			</div>
-			<div class="c2"><a href="http://periodika.digitale-sammlungen.de/wsa/start.html">WSA</a><br>
-				Wiener Slawistischer Almanach (BSB)
+				<div class="c2"><a href="http://www.impact-project.eu/">IMPACT</a><br>
+					Improving Access to Historical Text (EU/FP7/IP)
+				</div>
+				<div class="c2"><a href="http://digi20.digitale-sammlungen.de/">Digi20</a><br>
+					Digitalisierung der DFG-Sondersammelgebiete (DFG)
+				</div>
+				<div class="c2"><a href="http://www.ostdok.de/">OstDok</a><br>
+					Osteuropa-Dokumente online (DFG)
+				</div>
+				<div class="c2"><a href="http://www.perspectivia.net/content/publikationen/francia/francia-retro">Francia-Retro</a><br>
+					Forschungen zur westeurop&auml;ischen Geschichte (DHIP)
+				</div>
+				<div class="c2"><a href="http://www.bmlo.lmu.de/">BMLO</a><br>
+					Bayerisches Musiker-Lexikon online (DFG)
+				</div>
+				<div class="c2"><a href="http://www.bayerische-landesbibliothek-online.de/">BLO</a><br>
+					Bayerische Landesbibliothek online (StMWFK)
+				</div>
+				<div class="c2"><a href="http://www.dmgh.de/">dMGH</a><br>
+					Digitale Monumenta Germaniae Historica (DFG)
+				</div>
+				<div class="c2"><a href="http://www.reichstag-abgeordnetendatenbank.de/">RT III</a><br>
+					Reichstagsabgeordneten Datenbank (DFG)
+				</div>
+				<div class="c2"><a href="http://www.reichstagsprotokolle.de/index.html">RT II</a><br>
+					Verhandlungen des Deutschen Reichstags (DFG)
+				</div>
+				<div class="c2"><a href="http://geschichte.digitale-sammlungen.de/hab/online/angebot">HAB</a><br>
+					Historischer Atlas von Bayern (BAdW)
+				</div>
+				<div class="c2"><a href="http://personen.digitale-sammlungen.de/baltlex/start.html">BaltLex</a><br>
+					Baltische biographische Lexika (BSB/UTlib)
+				</div>
+				<div class="c2"><a href="http://periodika.digitale-sammlungen.de/wsa/start.html">WSA</a><br>
+					Wiener Slawistischer Almanach (BSB)
+				</div>
 			</div>
 		</div>
-	</div>
 	</body>
 </html>
