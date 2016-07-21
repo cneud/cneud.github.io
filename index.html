@@ -4,27 +4,6 @@
 		<meta charset="UTF-8">
 		<title>cneud</title>
 		<base href="index.html" target="_blank">
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-		<script type="text/javascript">
-			function menu(selectmenu) {
-				$('.menu').each(function(index) {
-					if ($(this).attr("id") == selectmenu) {
-						$(this).show(200);
-						$('.submenu').hide();
-					}
-					else {
-						$(this).hide(400);
-					}
-				});
-			}
-			function submenu(selectmenu) {
-				$('.submenu').each(function(index) {
-					if ($(this).attr("id") == selectmenu) {
-						$(this).slideToggle();
-					}
-				});
-			}
-		</script>
 		<style type=text/css>
 			body {
 				color:gray;
@@ -659,5 +638,26 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+			function menu(selectmenu) {
+				$('.menu').each(function(index) {
+					if ($(this).attr("id") == selectmenu) {
+						$(this).show(200);
+						$('.submenu').hide();
+					}
+					else {
+						$(this).hide(400);
+					}
+				});
+			}
+			function submenu(selectmenu) {
+				$('.submenu').each(function(index) {
+					if ($(this).attr("id") == selectmenu) {
+						$(this).slideToggle();
+					}
+				});
+			}
+		</script>
 	</body>
 </html>
